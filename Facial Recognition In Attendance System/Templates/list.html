@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 16px;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<h2>Attendees List</h2>
+<p>The attendees are:</p>
+
+<table>
+  <thead>
+    <td>Name</td>
+    <td>Time</td>
+    <td>Date</td>
+  </thead>
+
+{% for row in rows %}
+    <tr>
+        <td>{{ row[0] }}</td>
+        <td>{{ row[1] }}</td>
+        <td>{{ row[2] }}</td>
+    </tr>
+{% endfor %}
+</table>
+  <a href="/calender">Go back to the calender</a>
+
+</body>
+</html>
